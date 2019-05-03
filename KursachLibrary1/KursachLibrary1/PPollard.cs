@@ -2,6 +2,9 @@
 
 namespace KursachLibrary1
 {
+    /// <summary>
+    /// Данный класс реализует метод факторизации Полларда
+    /// </summary>
     public class PPollard:IFactor
     {
         /* Идея: на входе n. ρ-алгоритм Полларда строит числовую последовательность.
@@ -10,8 +13,15 @@ namespace KursachLibrary1
          * На каждом шаге вычисляем всевозможные d=НОД(n,xi-xj), где j<i.
          * Если d!=1, то d - делитель n.
          */
+
         public string Name { get; } = "P-Pollard's Method";
+
         //Ишмухаметов.
+        /// <summary>
+        /// Данный метод ищет разложение входного числа
+        /// </summary>
+        /// <param name="number"> Число для разложения </param>
+        /// <returns> Число из разложения </returns>
         public BigInteger Factor(BigInteger number)
         {
             BigInteger x = 2;
@@ -38,37 +48,5 @@ namespace KursachLibrary1
         {
             return n * n + 1;
         }
-
-        //INTUIT
-        //public BigInteger Factor(BigInteger number)
-        //{
-        //    BigInteger x = 2;
-        //    BigInteger y = 2;
-        //    BigInteger p = 1;
-
-        //    while (p == 1)
-        //    {
-        //        x = CompressiveFunc(x) % number;
-        //        y = CompressiveFunc(y) % number;
-        //        y = CompressiveFunc(y) % number;
-
-        //        p = BigInteger.Abs(Helper.GCD(x - y, number));
-        //    }
-        //    return p == number ? 1 : p;
-        //}
-
-        //issledovanie-parall алгоритм
-        //public BigInteger Factor(BigInteger number)
-        //{
-        //    BigInteger x = 2;
-        //    BigInteger y = CompressiveFunc(x)%number;
-
-        //    while (BigInteger.Abs(Helper.GCD(y - x, number))==1 || BigInteger.Abs(Helper.GCD(y - x, number))==number)
-        //    {
-        //        x = CompressiveFunc(x) % number;
-        //        y = CompressiveFunc(CompressiveFunc(x)) % number;
-        //    }
-        //    return BigInteger.Abs(Helper.GCD(y - x, number));
-        //}
     }
 }

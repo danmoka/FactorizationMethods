@@ -5,6 +5,9 @@ using System.Numerics;
 
 namespace UTests
 {
+    /// <summary>
+    /// Юнит тесты для алгоритма Ферма
+    /// </summary>
     [TestClass]
     public class UnitTestFerma
     {

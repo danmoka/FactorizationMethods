@@ -7,6 +7,10 @@ namespace TestConsol
 {
     class Program
     {
+        /// <summary>
+        /// Результат работы программы - время разложения для алгоритмов факторизации на нескольких тестовых выборках чисел
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             BigInteger[,] testNumbersPrime = new BigInteger[11, 2]
@@ -87,83 +91,83 @@ namespace TestConsol
                 Console.WriteLine("----------------------------------");
             }
 
-            //Console.WriteLine("NotPrime");
+            Console.WriteLine("NotPrime");
 
-            //for (int i = 0; i < testNumbersNotPrime.Length; i++)
-            //{
-            //    Console.WriteLine("\t DivCheck | Ferma | Leman | pPollard");
-            //    Console.Write(testNumbersNotPrime[i]);
+            for (int i = 0; i < testNumbersNotPrime.Length; i++)
+            {
+                Console.WriteLine("\t DivCheck | Ferma | Leman | pPollard");
+                Console.Write(testNumbersNotPrime[i]);
 
-            //    if (testNumbersNotPrime[i] <= 999875863219)
-            //    {
-            //        stopwatch.Start();
-            //        resultForDivisionCheck = divisionCheck.Factor(testNumbersNotPrime[i]);
-            //        stopwatch.Stop();
-            //        Console.Write(" {0}:{1}", resultForDivisionCheck, stopwatch.ElapsedMilliseconds);
-            //    }
+                if (testNumbersNotPrime[i] <= 999875863219)
+                {
+                    stopwatch.Start();
+                    resultForDivisionCheck = divisionCheck.Factor(testNumbersNotPrime[i]);
+                    stopwatch.Stop();
+                    Console.Write(" {0}:{1}", resultForDivisionCheck, stopwatch.ElapsedMilliseconds);
+                }
 
-            //    stopwatch.Reset();
+                stopwatch.Reset();
 
-            //    stopwatch.Start();
-            //    resultForFerma = ferma.Factor(testNumbersNotPrime[i]);
-            //    stopwatch.Stop();
-            //    Console.Write(" {0}:{1}", resultForFerma, stopwatch.ElapsedMilliseconds);
+                stopwatch.Start();
+                resultForFerma = ferma.Factor(testNumbersNotPrime[i]);
+                stopwatch.Stop();
+                Console.Write(" {0}:{1}", resultForFerma, stopwatch.ElapsedMilliseconds);
 
-            //    stopwatch.Reset();
+                stopwatch.Reset();
 
-            //    stopwatch.Start();
-            //    resultForLeman = leman.Factor(testNumbersNotPrime[i]);
-            //    stopwatch.Stop();
-            //    Console.Write(" {0}:{1}", resultForLeman, stopwatch.ElapsedMilliseconds);
+                stopwatch.Start();
+                resultForLeman = leman.Factor(testNumbersNotPrime[i]);
+                stopwatch.Stop();
+                Console.Write(" {0}:{1}", resultForLeman, stopwatch.ElapsedMilliseconds);
 
-            //    stopwatch.Reset();
+                stopwatch.Reset();
 
-            //    stopwatch.Start();
-            //    resultForPPollard = pPollard.Factor(testNumbersNotPrime[i]);
-            //    stopwatch.Stop();
-            //    Console.WriteLine(" {0}:{1}", resultForPPollard, stopwatch.ElapsedMilliseconds);
+                stopwatch.Start();
+                resultForPPollard = pPollard.Factor(testNumbersNotPrime[i]);
+                stopwatch.Stop();
+                Console.WriteLine(" {0}:{1}", resultForPPollard, stopwatch.ElapsedMilliseconds);
 
-            //    Console.WriteLine("----------------------------------");
-            //}
+                Console.WriteLine("----------------------------------");
+            }
 
-            //Console.WriteLine("NotPrimeFarAway");
+            Console.WriteLine("NotPrimeFarAway");
 
-            //for (int i = 0; i < testNumbersNotPrimeFarAway.Length; i++)
-            //{
-            //    Console.WriteLine("\t DivCheck | Ferma | Leman | pPollard");
-            //    Console.Write(testNumbersNotPrimeFarAway[i]);
+            for (int i = 0; i < testNumbersNotPrimeFarAway.Length; i++)
+            {
+                Console.WriteLine("\t DivCheck | Ferma | Leman | pPollard");
+                Console.Write(testNumbersNotPrimeFarAway[i]);
 
-            //    if (testNumbersNotPrimeFarAway[i] < 999875863219)
-            //    {
-            //        stopwatch.Start();
-            //        resultForDivisionCheck = divisionCheck.Factor(testNumbersNotPrimeFarAway[i]);
-            //        stopwatch.Stop();
-            //        Console.Write(" {0}:{1}", resultForDivisionCheck, stopwatch.ElapsedMilliseconds);
-            //    }
+                if (testNumbersNotPrimeFarAway[i] < 999875863219)
+                {
+                    stopwatch.Start();
+                    resultForDivisionCheck = divisionCheck.Factor(testNumbersNotPrimeFarAway[i]);
+                    stopwatch.Stop();
+                    Console.Write(" {0}:{1}", resultForDivisionCheck, stopwatch.ElapsedMilliseconds);
+                }
 
-            //    stopwatch.Reset();
+                stopwatch.Reset();
 
-            //    stopwatch.Start();
-            //    resultForFerma = ferma.Factor(testNumbersNotPrimeFarAway[i]);
-            //    stopwatch.Stop();
-            //    Console.Write(" {0}:{1}", resultForFerma, stopwatch.ElapsedMilliseconds);
+                stopwatch.Start();
+                resultForFerma = ferma.Factor(testNumbersNotPrimeFarAway[i]);
+                stopwatch.Stop();
+                Console.Write(" {0}:{1}", resultForFerma, stopwatch.ElapsedMilliseconds);
 
-            //    stopwatch.Reset();
+                stopwatch.Reset();
 
-            //    stopwatch.Start();
-            //    resultForLeman = leman.Factor(testNumbersNotPrimeFarAway[i]);
-            //    stopwatch.Stop();
-            //    Console.Write(" {0}:{1}", resultForLeman, stopwatch.ElapsedMilliseconds);
+                stopwatch.Start();
+                resultForLeman = leman.Factor(testNumbersNotPrimeFarAway[i]);
+                stopwatch.Stop();
+                Console.Write(" {0}:{1}", resultForLeman, stopwatch.ElapsedMilliseconds);
 
-            //    stopwatch.Reset();
+                stopwatch.Reset();
 
-            //    stopwatch.Start();
-            //    resultForPPollard = pPollard.Factor(testNumbersNotPrimeFarAway[i]);
-            //    stopwatch.Stop();
-            //    Console.WriteLine(" {0}:{1}", resultForPPollard, stopwatch.ElapsedMilliseconds);
+                stopwatch.Start();
+                resultForPPollard = pPollard.Factor(testNumbersNotPrimeFarAway[i]);
+                stopwatch.Stop();
+                Console.WriteLine(" {0}:{1}", resultForPPollard, stopwatch.ElapsedMilliseconds);
 
-            //    Console.WriteLine("----------------------------------");
-            //}
+                Console.WriteLine("----------------------------------");
+            }
             //{
             //    2305843009213693951,
             //    489133282872437279,

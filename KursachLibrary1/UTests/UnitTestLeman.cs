@@ -5,6 +5,9 @@ using System.Numerics;
 
 namespace UTests
 {
+    /// <summary>
+    /// Юнит тесты для алгоритма Лемана
+    /// </summary>
     [TestClass]
     public class UnitTestLeman
     {

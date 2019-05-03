@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace KursachLibrary1
 {
+    /// <summary>
+    /// Данный класс реализует мето факторизации Лемана
+    /// </summary>
     public class Leman : IFactor
     {
         /*Идея: на входе n.
@@ -16,9 +19,14 @@ namespace KursachLibrary1
 
         public string Name { get; } = "Leman's Method";
 
-        //Нестеренко
+        /// <summary>
+        /// Данный метод ищет разложение входного числа
+        /// </summary>
+        /// <param name="number"> Число для разложения </param>
+        /// <returns> Число из разложения </returns>
         public BigInteger Factor(BigInteger number)
         {
+            //Нестеренко, Василенко
             BigInteger stop = Helper.SqrtMSDN(number,3);
             BigInteger sqr6N = Helper.SqrtMSDN(number,6);
             BigInteger result = 1;
@@ -44,7 +52,6 @@ namespace KursachLibrary1
 
                     if (Helper.IsTrueSqrt(teor, sqrTeor))
                     {
-                        //BigInteger b = Helper.SqrtMSDN(BigInteger.Pow(a, 2) - 4 * k * number);
                         BigInteger gcdABPlus = BigInteger.Abs(Helper.GCD(a+sqrTeor,number));
                         BigInteger gcdABMines = BigInteger.Abs(Helper.GCD(a - sqrTeor, number));
                         if (gcdABPlus > 1 && gcdABPlus < number) result = gcdABPlus;
