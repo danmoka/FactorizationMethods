@@ -51,9 +51,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\KursachLibrary1\KursachLibrary1.csproj">
+    <ProjectReference Include="..\KursachLibrary1\FactorizationMethods.csproj">
       <Project>{194adf99-e93e-4ca1-967f-5f81d9507222}</Project>
-      <Name>KursachLibrary1</Name>
+      <Name>FactorizationMethods</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -54,16 +54,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitTestFerma.cs" />
     <Compile Include="UnitTestLeman.cs" />
-    <Compile Include="UnitTestP1Pollard.cs" />
     <Compile Include="UnitTestPPollard.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\KursachLibrary1\KursachLibrary1.csproj">
+    <ProjectReference Include="..\KursachLibrary1\FactorizationMethods.csproj">
       <Project>{194adf99-e93e-4ca1-967f-5f81d9507222}</Project>
-      <Name>KursachLibrary1</Name>
+      <Name>FactorizationMethods</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

@@ -11,7 +11,7 @@ namespace UTests
     [TestClass]
     public class UnitTestDevCheck
     {
-        private DivisionCheck Dc { get; set; } = new DivisionCheck();
+        private TrialDivisionMethod Dc { get; set; } = new TrialDivisionMethod();
         private BigInteger Res { get; set; } = 0;
 
         [TestMethod]

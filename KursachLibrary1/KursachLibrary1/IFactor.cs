@@ -7,7 +7,7 @@ namespace KursachLibrary1
     /// </summary>
     internal interface IFactor
     {
-        string Name { get; } //название алгоритма - для вывода информации на экран
-        BigInteger Factor(BigInteger number); //метод, который раскладывает целое число на простые
+        string Name { get; } // Название алгоритма - для вывода информации на экран
+        BigInteger Factor(BigInteger number); // Метод, который возвращает делитель входного числа
     }
 }

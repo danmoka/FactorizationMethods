@@ -19,9 +19,9 @@ namespace UTests
         [TestMethod]
         public void Prime950001915000209()
         {
-            Res = Leman.Factor(950001915000209);
+            Res = Leman.Factor(49);
 
-            Assert.AreEqual(10000019, Res);
+            Assert.AreEqual(7, Res);
         }
 
         [TestMethod]

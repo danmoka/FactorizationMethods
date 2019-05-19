@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KursachLibrary1", "KursachLibrary1\KursachLibrary1.csproj", "{194ADF99-E93E-4CA1-967F-5F81D9507222}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactorizationMethods", "KursachLibrary1\FactorizationMethods.csproj", "{194ADF99-E93E-4CA1-967F-5F81D9507222}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UTests", "UTests\UTests.csproj", "{A91D0FD5-C1F9-441F-AF36-CC39B15F8A1C}"
 EndProject

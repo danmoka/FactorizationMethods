@@ -5,9 +5,9 @@ namespace KursachLibrary1
     /// <summary>
     /// Алгоритм пробных делений
     /// </summary>
-    public class DivisionCheck : IFactor
+    public class TrialDivisionMethod : IFactor
     {
-        public string Name { get; } = "Division Check Method";
+        public string Name { get; } = "Trial division method";
 
         /// <summary>
         /// Данный метод подбирает делители входного числа n до корня из n
@@ -16,21 +16,22 @@ namespace KursachLibrary1
         /// <returns> Делитель входного числа </returns>
         public BigInteger Factor(BigInteger number)
         {
-            BigInteger a = 2;
-            BigInteger result = 1;
+            BigInteger startNumber = 2;
+            BigInteger divisor = 1;
 
-            while (a <= Helper.SqrtMSDN(number,2))
+            // До корня из n подбираем делитель входного числа
+            while (startNumber <= Helper.SqrtMSDN(number,2))
             {
-                if (number % a == 0)
+                if (number % startNumber == 0)
                 {
-                    result = a;
+                    divisor = startNumber;
                     break;
                 }
 
-                a++;
+                startNumber++;
             }
 
-            return result;
+            return divisor;
         }
     }
 }

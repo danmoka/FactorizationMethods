@@ -42,7 +42,7 @@ namespace TestConsol
                 testNumbersNotPrimeFarAway[i] = testNumbersPrime[i, 0] * testNumbersPrime[testNumbersNotPrimeFarAway.Length - 1 - i, 1];
             }
 
-            DivisionCheck divisionCheck = new DivisionCheck();
+            TrialDivisionMethod divisionCheck = new TrialDivisionMethod();
             Ferma ferma = new Ferma();
             Leman leman = new Leman();
             PPollard pPollard = new PPollard();
@@ -52,24 +52,27 @@ namespace TestConsol
             BigInteger resultForLeman = 0;
             BigInteger resultForPPollard = 0;
 
-            Stopwatch stopwatch = new Stopwatch();
+            const int column = 0;
 
-            for (int i = 0; i < 11; i++)
+            Stopwatch stopwatch = new Stopwatch();
+            Console.WriteLine("Prime");
+
+            for (int i = 0; i < testNumbersPrime.Length; i++)
             {
                 Console.WriteLine("\t DivCheck | Ferma | Leman | pPollard");
-                Console.Write(testNumbersPrime[i, 1]);
+                Console.Write(testNumbersPrime[i, column]);
 
                 stopwatch.Start();
-                resultForDivisionCheck = divisionCheck.Factor(testNumbersPrime[i, 1]);
+                resultForDivisionCheck = divisionCheck.Factor(testNumbersPrime[i, column]);
                 stopwatch.Stop();
                 Console.Write(" {0}:{1}", resultForDivisionCheck, stopwatch.ElapsedMilliseconds);
 
                 stopwatch.Reset();
 
-                if (testNumbersPrime[i, 1] < 999999223)
+                if (testNumbersPrime[i, 0] <= 999999223)
                 {
                     stopwatch.Start();
-                    resultForFerma = ferma.Factor(testNumbersPrime[i, 1]);
+                    resultForFerma = ferma.Factor(testNumbersPrime[i, column]);
                     stopwatch.Stop();
                     Console.Write(" {0}:{1}", resultForFerma, stopwatch.ElapsedMilliseconds);
                 }
@@ -77,14 +80,14 @@ namespace TestConsol
                 stopwatch.Reset();
 
                 stopwatch.Start();
-                resultForLeman = leman.Factor(testNumbersPrime[i, 1]);
+                resultForLeman = leman.Factor(testNumbersPrime[i, column]);
                 stopwatch.Stop();
                 Console.Write(" {0}:{1}", resultForLeman, stopwatch.ElapsedMilliseconds);
 
                 stopwatch.Reset();
 
                 stopwatch.Start();
-                resultForPPollard = pPollard.Factor(testNumbersPrime[i, 1]);
+                resultForPPollard = pPollard.Factor(testNumbersPrime[i, column]);
                 stopwatch.Stop();
                 Console.WriteLine(" {0}:{1}", resultForPPollard, stopwatch.ElapsedMilliseconds);
 
@@ -137,14 +140,11 @@ namespace TestConsol
                 Console.WriteLine("\t DivCheck | Ferma | Leman | pPollard");
                 Console.Write(testNumbersNotPrimeFarAway[i]);
 
-                if (testNumbersNotPrimeFarAway[i] < 999875863219)
-                {
-                    stopwatch.Start();
-                    resultForDivisionCheck = divisionCheck.Factor(testNumbersNotPrimeFarAway[i]);
-                    stopwatch.Stop();
-                    Console.Write(" {0}:{1}", resultForDivisionCheck, stopwatch.ElapsedMilliseconds);
-                }
-
+                stopwatch.Start();
+                resultForDivisionCheck = divisionCheck.Factor(testNumbersNotPrimeFarAway[i]);
+                stopwatch.Stop();
+                Console.Write(" {0}:{1}", resultForDivisionCheck, stopwatch.ElapsedMilliseconds);
+                
                 stopwatch.Reset();
 
                 stopwatch.Start();
